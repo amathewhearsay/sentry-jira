@@ -129,6 +129,9 @@ class JIRAOptionsForm(forms.Form):
         if missing_fields:
             raise ValidationError("Missing Fields")
 
+        if not cd.get("password"):
+            return
+
         jira = JIRAClient(cd["instance_url"], cd["username"], cd["password"])
         sut_response = jira.get_priorities()
         if sut_response.status_code == 403 or sut_response.status_code == 401:
