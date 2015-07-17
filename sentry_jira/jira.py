@@ -41,7 +41,7 @@ class JIRAClient(object):
 
         metas = response.json
 
-        if not metas:
+        if response.status_code != 200 or not metas:
             return
 
         if len(metas["projects"]) > 1:
