@@ -264,6 +264,8 @@ class JIRAPlugin(IssuePlugin):
             return True
 
     def post_process(self, group, event, is_new, is_sample, **kwargs):
+        logging.info("Hello woooorlld!!!")
+
         if self.should_create(group, event, is_new):
 
             jira_client = self.get_jira_client(group.project)
