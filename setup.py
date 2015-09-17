@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 install_requires = [
     'sentry>=6.0.0',
-    'requests>=2.5.1',
+    'requests<2.6.0',
     'BeautifulSoup>=3.2.1'
 ]
 
