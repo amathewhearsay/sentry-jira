@@ -45,8 +45,8 @@ class JIRAPlugin(IssuePlugin):
     ]
 
     def is_configured(self, request, project, **kwargs):
-        if not self.get_option('default_project', project):
-            return False
+        #if not self.get_option('default_project', project):
+        #    return False
         return True
 
     def get_jira_client(self, project):
