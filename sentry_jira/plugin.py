@@ -15,6 +15,7 @@ from sentry_jira import VERSION as PLUGINVERSION
 from sentry_jira.forms import JIRAOptionsForm, JIRAIssueForm
 from sentry_jira.jira import JIRAClient
 
+log = logging.getLogger(__name__)
 
 class JIRAPlugin(IssuePlugin):
     author = "Adam Thurlow"
@@ -265,6 +266,8 @@ class JIRAPlugin(IssuePlugin):
 
     def post_process(self, group, event, is_new, is_sample, **kwargs):
         logging.info("Hello woooorlld!!!")
+        log.info("Gosh please work")
+        log.error("What the heck man!")
 
         if self.should_create(group, event, is_new):
 
