@@ -17,6 +17,10 @@ from sentry_jira.jira import JIRAClient
 
 log = logging.getLogger(__name__)
 
+logging.info("Hello woooorlld!!!")
+log.info("Gosh please work")
+log.error("What the heck man!")
+
 class JIRAPlugin(IssuePlugin):
     author = "Adam Thurlow"
     author_url = "https://github.com/thurloat/sentry-jira"
